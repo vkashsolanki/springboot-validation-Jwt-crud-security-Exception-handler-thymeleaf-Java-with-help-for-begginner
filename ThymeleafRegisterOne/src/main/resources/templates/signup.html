@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" xmlns="http://www.w3.org/1999/xhtml" 
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<title>Sign up page for register</title>
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+<body>
+	<div class="content">
+		<div class="text">Sign Up Form</div>
+
+		<form action="#" th:action="@{/register}"  method="post">
+			<div class="field">
+				<input type="text" name="name" required> <span class="fas fa-user"></span>
+				<label>Name</label>
+			</div>
+
+
+			<div class="field">
+				<input type="text" name="email" required> <span class="fas fa-envelope"></span>
+				<label>Email</label>
+			</div>
+			
+			 <br>
+			<div class="field">
+				<input type="tel" name="phone" required> <span class="fas fa-phone"></span>
+				<label>Phone No.</label>
+			</div><br>
+
+
+			<div class="field">
+				<input type="password" name="password" required> <span class="fas fa-lock"></span>
+				<label>Password</label>
+			</div>
+			
+			<button type="submit" value="sumbit">Sign in</button>
+			
+			<div class="sign-up">Have You Membership? <a th:href="@{/loginui}">Login</a>
+			</div>
+			
+			<a th:href="@{/}" class="fas fa-home">Go to Home Page</a>
+		</form>
+	</div>
+</body>
+</html>
